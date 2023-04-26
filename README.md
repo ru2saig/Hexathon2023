@@ -9,6 +9,9 @@ Techstack:
 - React
 - TODO
 
+# Features
+-
+
 # Team
 [Nidhish Chadive](https://github.com/ru2saig)
 
@@ -17,3 +20,9 @@ Techstack:
 [Hrushikesh Samnekar](https://github.com/hrushikesh-sam)
 
 [Tanmay Pradhan](https://github.com/tanmaypradhan4112)
+
+## Design Description (Abstract):
+- A dashboard which will be similar to any rental vechile app.
+- An icon showing you nearby dump area
+- Vechile icon dynamically tracking their location
+- An icon for different indication or status of dustbin
