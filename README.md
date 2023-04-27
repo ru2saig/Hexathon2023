@@ -9,8 +9,11 @@ Techstack:
 - React
 - TODO
 
-# Features
--
+## Features
+- Display Optimal path to the driver
+- Bot based messaging for the drivers
+- Display status of the dustbin 
+
 
 # Team
 [Nidhish Chadive](https://github.com/ru2saig)
