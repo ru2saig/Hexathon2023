@@ -34,7 +34,7 @@ export default function Home() {
         </ButtonToolbar>
 
         <Drawer className='px-8 bg-slate-300' placement={placement} open={open} onClose={() => setOpen(false)}>
-          <Drawer.Header className=''>
+          <Drawer.Header>
             <Drawer.Title className='py-2 text-xl font-semibold'>Driver's Details</Drawer.Title>
             {/* driver */}
             <div className='w-auto h-full p-4 bg-slate-400 border-2'>
