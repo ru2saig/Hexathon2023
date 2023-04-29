@@ -14,6 +14,12 @@ Techstack:
 - Bot based messaging for the drivers
 - Display status of the dustbin 
 
+## Sub Modules 
+- Designing a optimal path for driver 
+- Simulate it on the map 
+- Design a webpage 
+- Flow of the map
+
 
 ## Design Description (Abstract):
 Design inspiration
