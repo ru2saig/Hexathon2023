@@ -12,7 +12,7 @@ export default function Home() {
       </div>
 
       {/* Map container */}
-      <div className='w-full h-[544px] bg-slate-700'>
+      <div className='w-full h-[78vh] bg-slate-700'>
         <div>
 
         </div>
