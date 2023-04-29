@@ -36,3 +36,15 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+## End-points
+
+* `api/get-stat?code={code}` - [GET] to get the status of the bin on the level of fill.
+* `api/post-cap` - [POST] to update the bin fill stat of the bin.
+     ```
+     curl --location --request POST 'localhost:3000/api/post-cap' --header 'Content-Type: application/json' --data-raw '{
+     "code": "$code-bin",
+     "stat":"$target-stat"
+     }'
+     ```
