@@ -1,4 +1,6 @@
-import Image from 'next/image'
+'use client';
+import { Dropdown } from "@nextui-org/react";
+
 
 export default function Home() {
   return (
@@ -11,15 +13,23 @@ export default function Home() {
 
       {/* Map container */}
       <div className='w-full h-[544px] bg-slate-700'>
-          <div>
+        <div>
 
-          </div>
+        </div>
       </div>
 
       {/* driver details */}
-      <div className=''>
-
-      </div>
+      <Dropdown>
+        <Dropdown.Button flat>Trigger</Dropdown.Button>
+        <Dropdown.Menu aria-label="Static Actions">
+          <Dropdown.Item key="new">New file</Dropdown.Item>
+          <Dropdown.Item key="copy">Copy link</Dropdown.Item>
+          <Dropdown.Item key="edit">Edit file</Dropdown.Item>
+          <Dropdown.Item key="delete" color="error">
+            Delete file
+          </Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
     </div>
   )
 }
