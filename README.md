@@ -16,6 +16,7 @@ Techstack:
 
 ## Sub Modules 
 - Designing a optimal path for driver 
+- Bot messaging map
 - Simulate it on the map 
 - Design a webpage 
 - Flow of the map
