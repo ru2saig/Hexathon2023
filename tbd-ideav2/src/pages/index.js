@@ -1,6 +1,7 @@
 'use client';
 import { React, useState } from 'react';
 import { Drawer, ButtonToolbar, Button, IconButton, Placeholder } from 'rsuite';
+import Map from '../components/Map';
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -12,22 +13,20 @@ export default function Home() {
   }
 
   return (
-    <div className='w-screen h-full'>
+    <div className='w-auto h-full bg-gray-900'>
       {/* Header function */}
-      <div className='header text-center text-2xl font-bold'>
+      <div className='header text-white py-4 text-center text-2xl font-bold'>
         <h1>Trash Track</h1>
         <p className='text-xl font-light'>Navigate the city with Optimal Dustbin Collection</p>
       </div>
 
       {/* Map container */}
-      <div className='relative w-full h-[544px] bg-slate-700'>
-        <div>
-
-        </div>
+      <div className='py-8'>
+        <Map />
       </div>
 
       {/* driver details */}
-      <div className='absolute p-2 bg-white w-full font-bold text-center bottom-0'>
+      <div className='p-2 bg-white w-full font-bold text-center bottom-0'>
         <ButtonToolbar>
           <IconButton onClick={() => handleOpen('down')}>
             Show's Driver Details
