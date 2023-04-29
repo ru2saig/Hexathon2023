@@ -1,8 +1,17 @@
 'use client';
-import { Dropdown } from "@nextui-org/react";
-
+import { React, useState } from 'react';
+import { Drawer, ButtonToolbar, Button, IconButton, Placeholder } from 'rsuite';
 
 export default function Home() {
+  const [open, setOpen] = useState(false);
+  const [placement, setPlacement] = useState();
+
+  const handleOpen = key => {
+    setOpen(true);
+    setPlacement(key);
+  }
+
+
   return (
     <div className='w-screen h-full'>
       {/* Header function */}
@@ -12,24 +21,60 @@ export default function Home() {
       </div>
 
       {/* Map container */}
-      <div className='w-full h-[544px] bg-slate-700'>
+      <div className='relative w-full h-[544px] bg-slate-700'>
         <div>
 
         </div>
       </div>
 
       {/* driver details */}
-      <Dropdown>
-        <Dropdown.Button flat>Trigger</Dropdown.Button>
-        <Dropdown.Menu aria-label="Static Actions">
-          <Dropdown.Item key="new">New file</Dropdown.Item>
-          <Dropdown.Item key="copy">Copy link</Dropdown.Item>
-          <Dropdown.Item key="edit">Edit file</Dropdown.Item>
-          <Dropdown.Item key="delete" color="error">
-            Delete file
-          </Dropdown.Item>
-        </Dropdown.Menu>
-      </Dropdown>
+      <div className='absolute p-2 bg-white w-full font-bold text-center bottom-0'>
+        <ButtonToolbar>
+          <IconButton onClick={() => handleOpen('down')}>
+            Show's Driver Details
+          </IconButton>
+        </ButtonToolbar>
+
+        <Drawer className='px-8 bg-slate-300' placement={placement} open={open} onClose={() => setOpen(false)}>
+          <Drawer.Header className=''>
+            <Drawer.Title className='py-2 text-xl font-semibold'>Driver's Details</Drawer.Title>
+            {/* driver */}
+            <div className='w-auto h-full p-4 bg-slate-400 border-2'>
+              {/* driver plate number */}
+              <div className='flex justify-between'>
+                <div className='flex items-center'>
+                  <div className='flex-none'>
+                    <img className='w-[100px]' src="https://cdn-icons-png.flaticon.com/512/2766/2766755.png" alt="" />
+                  </div>
+                  <div className='flex-initial px-4'>
+                    <p>AP 21 BS</p>
+                    <p className='font-bold text-xl'>4567</p>
+                  </div>
+                </div>
+
+                <div className='flex items-center'>
+                  <div className='flex-none bg-black border-1 rounded-full'>
+                    <img className='w-[70px]' src="https://freesvg.org/img/abstract-user-flat-4.png" alt="" />
+                  </div>
+                  <div className='flex-initial px-4'>
+                    <p>Tanmay Pradhan</p>
+                    <p className='font-bold text-xl'>4.5</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* driver name */}
+            </div>
+          </Drawer.Header>
+
+          <Placeholder.Paragraph rows={1} />
+
+          <Drawer.Actions>
+            <Button className='bg-red-500 text-white border px-4 py-2 rounded-md font-medium' onClick={() => setOpen(false)}>Close</Button>
+          </Drawer.Actions>
+        </Drawer>
+      </div>
+
     </div>
   )
 }
