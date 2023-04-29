@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { Client, Account, ID } from "appwrite";
 
 const client = new Client()
@@ -20,8 +18,7 @@ export default function handler(req, res) {
             res.status(200).json({ message: 'Account created successfully!' });
         }, error => {
             console.log(error);
-            res.status(400).json({message: 'Account not created!!'})
+            res.status(400).json({message: 'Account not created!!'});
         });
     }
 }
->>>>>>> 292aa3b54bfd32852306d4b6f1a6f99b9ff1b0a1

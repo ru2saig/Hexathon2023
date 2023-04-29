@@ -1,7 +1,7 @@
 import { Client, Databases, ID } from "appwrite";
 
 const client = new Client()
-    .setEndpoint('http://localhost:4172/v1') // Your API Endpoint
+    .setEndpoint('http://100.104.213.57:4172/v1') // Your API Endpoint
     .setProject('644cfafd2592bab3681f');
 const account = new Databases(client);
         
@@ -15,18 +15,20 @@ export default function handler(req, res) {
             ID.unique(),
             {
                 'dustbin-lat': 17.496380,
-                'dustbin-lng': 78.403267,
+                'dusbin-lng': 78.403267,
                 'area': 'bhagyanagar kphb',
-                'last-collected': '29/04/2023, 12:56:26.871 pm',
-                'dustbin-fulness': 46
+                'last-collected': '2023-04-07T00:00Z',
+                'dustbin-fullness': 46,
             }
             
         );
 
         promise.then(function (response) {
             console.log(response);
+            res.status(200).json({ message: 'Database Created!', response: response });
         }, function (error) {
             console.log(error);
+            res.status(200).json({ message: 'Error!', response:error });
         });
     }
 }
