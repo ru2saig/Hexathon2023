@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 'use client';
+=======
+'use setstate';
+
+import Image from 'next/image'
+>>>>>>> api
 import { Dropdown } from "@nextui-org/react";
 
 
@@ -17,6 +23,7 @@ export default function Home() {
 
         </div>
       </div>
+
 
       {/* driver details */}
       <Dropdown>

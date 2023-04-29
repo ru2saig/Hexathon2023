@@ -10,6 +10,10 @@
   },
   "dependencies": {
     "@nextui-org/react": "^1.0.0-beta.12",
+<<<<<<< HEAD
+=======
+    "appwrite": "^11.0.0",
+>>>>>>> api
     "autoprefixer": "10.4.14",
     "next": "13.3.0",
     "postcss": "8.4.23",
