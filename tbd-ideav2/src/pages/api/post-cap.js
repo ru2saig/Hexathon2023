@@ -4,8 +4,7 @@
 //   res.status(200).json({ name: 'John Doe' })
 // }
 
-import { Client, Databases, Query } from "appwrite";
-import { data } from "autoprefixer";
+import { Client, Databases } from "appwrite";
 
 const client = new Client()
     .setEndpoint('http://100.104.213.57:4172/v1') // Your API Endpoint
