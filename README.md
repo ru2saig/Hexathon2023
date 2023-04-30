@@ -6,37 +6,35 @@ A system that maps out an optimal route for the collection of garbage from dustb
 
 Techstack:
 - GIS
-- React
-- TODO
+- Next.js
+- Appwrite
+- LoRaWAN
 
 ## Features
 - Display Optimal path to the driver
 - Bot based messaging for the drivers
-- Display status of the dustbin 
+- Display status of the dustbin as an icon
 
 ## Sub Modules 
 - Designing a optimal path for driver 
-- Bot messaging map
 - Simulate it on the map 
 - Design a webpage 
 - Flow of the map
 
+## Installation
+TODO
 
-## Design Description (Abstract):
-Design inspiration
-![image](https://user-images.githubusercontent.com/78547592/235123743-9ffe3f11-41b4-4e8e-b3bb-1a737be4b2f0.png)
+## Running
 
-Confirmation of the design
-```
-Design of the webapp will be single page
-Map at top to display driver's route
-Driver's details and journey of driver
-```
-TODO list of Design module.
-- A dashboard which will be similar to any rental vechile app.
-- An icon showing you nearby dump area
-- Vechile icon dynamically tracking their location
-- An icon for different indication or status of dustbin
+### With Dustbin Simulator
+NOTES: 
+This has to be changed, around to make it less hard-coded. These are just notes, for future reference.
+Appwrite-middleware must be run on localhost:3000
+Client can be run on any port
+Make sure that appwrite is running on [Rishi's](https://github.com/hrushikesh-sam) computer, and tailscale is all set up.
+
+### With Actual Hardware
+TODO
 
 ## End-points
 
