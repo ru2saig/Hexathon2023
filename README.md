@@ -1,40 +1,42 @@
-# Hexathon 2023
-Repository of team TBD's entry to the Hexathon 2023 24-hour hackathon by Hexagon
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-# Description
-A system that maps out an optimal route for the collection of garbage from dustbins depending on how full they are. These "dustbins" are simply collection points for garbage, and are connected over a mesh network and send the amount of garbage they contain. Each collection run, an optimal route will be planned. 
+## Getting Started
 
-Techstack:
-- GIS
-- Next.js
-- Appwrite
-- LoRaWAN
+First, run the development server:
 
-## Features
-- Display Optimal path to the driver
-- Bot based messaging for the drivers
-- Display status of the dustbin as an icon
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+```
 
-## Sub Modules 
-- Designing a optimal path for driver 
-- Simulate it on the map 
-- Design a webpage 
-- Flow of the map
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Installation
-TODO
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-## Running
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-### With Dustbin Simulator
-NOTES: 
-This has to be changed, around to make it less hard-coded. These are just notes, for future reference.
-Appwrite-middleware must be run on localhost:3000
-Client can be run on any port
-Make sure that appwrite is running on [Rishi's](https://github.com/hrushikesh-sam) computer, and tailscale is all set up.
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-### With Actual Hardware
-TODO
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
 
 ## End-points
 
@@ -46,13 +48,3 @@ TODO
      "stat":"$target-stat"
      }'
      ```
-
-
-## Team
-[Nidhish Chadive](https://github.com/ru2saig)
-
-[Anirban Sikdar](https://github.com/anirban-1009)
-
-[Hrushikesh Samnekar](https://github.com/hrushikesh-sam)
-
-[Tanmay Pradhan](https://github.com/tanmaypradhan4112)
