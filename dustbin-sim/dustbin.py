@@ -28,9 +28,15 @@ class Dustbin:
         """Throws a die to figure out whether or not to fill the dustbin."""
         # send a signal each time the capacity changes
         self.capacity += random.randint(10, 20)
-        response = requests.post('http://localhost:3000/api/post-cap',
+
+        if self.capacity in range(0, 21):
+            response = requests.post('http://localhost:3000/api/post-cap',
                headers={'Content-Type': 'application/json', },
-               json={'code': f'{self.id}', 'stat': f'{self.capacity}', })
+               json={'code': f'{self.id}', 'stat': '20', })
+        elif self.capacity in range(45, 65):
+            response = requests.post('http://localhost:3000/api/post-cap',
+               headers={'Content-Type': 'application/json', },
+               json={'code': f'{self.id}', 'stat': '50', })
 
     def trigger(self):
         """This is called when the dustbin's capacity is reached."""
