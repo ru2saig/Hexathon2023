@@ -38,6 +38,18 @@ TODO list of Design module.
 - Vechile icon dynamically tracking their location
 - An icon for different indication or status of dustbin
 
+## End-points
+
+* `api/get-stat?code={code}` - [GET] to get the status of the bin on the level of fill.
+* `api/post-cap` - [POST] to update the bin fill stat of the bin.
+     ```
+     curl --location --request POST 'localhost:3000/api/post-cap' --header 'Content-Type: application/json' --data-raw '{
+     "code": "$code-bin",
+     "stat":"$target-stat"
+     }'
+     ```
+
+
 ## Team
 [Nidhish Chadive](https://github.com/ru2saig)
 
